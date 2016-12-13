@@ -1,2 +1,2 @@
 # nerkis.github.io
-personal website
+Personal website hosted by github.
