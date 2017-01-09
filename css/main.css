@@ -25,22 +25,10 @@ h3 {
     border-bottom: .25vh dashed black;
   }
 
-  h3 a:hover {
-    border-bottom: .25vh solid black;
-  }
-
 ul {
   list-style-type: none;
   padding: 0;
 }
-
-  ul:hover a {
-    opacity: 0.3;
-  }
-
-  ul .social-button > a:hover {
-    opacity: 1;
-  }
 
 .social-button {
   display: inline;
@@ -53,42 +41,34 @@ ul {
     transition: opacity 1s;
   }
 
-
-@media screen and (max-width: 500px) {
-  body {
-    font-family: 'Merriweather', serif;
+/* Only do hover effects on desktop */
+@media (min-width: 800px)  {
+  h3 a:hover {
+    border-bottom: .25vh solid black;
   }
 
-  #content {
-    padding: 3vh;
+  ul:hover a {
+    opacity: 0.3;
   }
 
-  a {
-    color: black;
-    text-decoration: none;
+  ul .social-button > a:hover {
+    opacity: 1;
   }
+}
 
+/* make things bigger on mobile */
+@media screen and (max-width: 800px) {
   h1 {
+    font-size: 7.5vh;
   }
 
   h3 {
+    font-size: 4.75vh;
     line-height: 1.5;
     min-width: 300px;
   }
-
-    h3 a {
-      border-bottom: .25vh dashed black;
-    }
-
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-
+  
   .social-button {
-    display: inline;
-    margin: 20 6vh 0 0;
-    font-size: 5vh;
-    float: left;
+    font-size: 12vh;
   }
 }
